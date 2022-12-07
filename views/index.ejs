@@ -6,10 +6,11 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>下のフォームにパスワードの条件を入力してください。</p>
 
-    <form action="/generate" method="post">
-      <input type="text" name="msg">
+    <form action="/generate" method="post" class="form">
+      <label for="length">パスワードの桁数</label><br>
+      <input type="number" name="length" id="length" value="8" minlength="1" maxlength="24"><br>
       <input type="submit" value="生成">
     </form>
   </body>
