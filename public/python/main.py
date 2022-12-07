@@ -18,19 +18,20 @@ def makePassword(length, isInstructSymbol):
 length = 8 # パスワードの桁数 (Int)
 isInstructSymbol = "y" # 記号を含めるかどうか (String) y/N
 
-# lengthがInt型か判定
-if length.isdecimal():
+# (nodejsと連携時にする length.isdecimal() で lengthがInt型か判定 ) lengthが1以上 AND lengthが24以下
+if length >= 1 and length <= 24:
     print('1以上の整数が入力されました\n')
     # 記号を含むかを y/nで分岐
     if 'y' in isInstructSymbol:
-        print("記号を含む" + length + "桁のパスワードを生成します")
-        password = makePassword(int(length), True)
+        print("記号を含む" + str(length) + "桁のパスワードを生成します")
+        password = makePassword(length, True)
 
     else:
-        print("記号を含まない" + length + "桁のパスワードを生成します")
-        password = makePassword(int(length), False)
+        print("記号を含まない" + str(length) + "桁のパスワードを生成します")
+        password = makePassword(length, False)
 
     print(password)
 
 else:
-    print("1以上の整数を入力してください")
+    # Error
+    print("1以上24以下の整数を入力してください")
