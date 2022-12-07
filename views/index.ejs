@@ -7,5 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <form action="/generate" method="post">
+      <input type="text" name="msg">
+      <input type="submit" value="生成">
+    </form>
   </body>
 </html>
