@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>パスワードを生成しました</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
     <h1>生成されたパスワード</h1>
-    <h2><%= password %></h2>
+    <h2>
+        <span id="ps"><%= password %></span>
+        <span class="material-symbols-outlined" id="copyBtn">content_copy</span>
+    </h2>
     <p>ご利用ありがとうございました。</p>
     <a href="/">生成ページへ戻る</a>
+
+    <script src="/javascripts/generatedPage.js"></script>
 </body>
 </html>
