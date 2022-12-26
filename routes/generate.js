@@ -11,12 +11,12 @@ async function generatePassword() {
         return stdout.toString();
     } catch(err) {
         console.log(err);
+        return "An error has occurred."
     }
 }
 
 router.post('/', (req, res) => {
     generatePassword().then(result => {
-        console.log(result);
         res.render("generate", { password: result });
     })
 });
