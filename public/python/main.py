@@ -34,7 +34,6 @@ if length >= 1 and length <= 24:
         # print("記号を含まない" + str(length) + "桁のパスワードを生成します")
         password = makePassword(length, False)
 
-    time.sleep(2)
     print(password)
 
 else:
