@@ -20,7 +20,7 @@ def makePassword(length, isInstructSymbol):
     return password
 
 length = 8 # パスワードの桁数 (Int)
-isInstructSymbol = "y" # 記号を含めるかどうか (String) y/N
+isInstructSymbol = "n" # 記号を含めるかどうか (String) y/N
 
 # (nodejsと連携時にする length.isdecimal() で lengthがInt型か判定 ) lengthが1以上 AND lengthが24以下
 if length >= 1 and length <= 24:
